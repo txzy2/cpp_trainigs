@@ -1,7 +1,8 @@
-#include "reader.h"
 #include <iostream>
 #include <sstream>
 #include <cmath>
+#include <limits>
+#include "reader.h"
 
 float IoReader::readLine(const std::string &paramName)
 {
