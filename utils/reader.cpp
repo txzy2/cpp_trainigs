@@ -5,7 +5,7 @@
 
 float IoReader::readLine(const std::string &paramName)
 {
-    float value;
+    double value;
     std::string line;
 
     while (true)
@@ -17,7 +17,7 @@ float IoReader::readLine(const std::string &paramName)
 
         if (iss >> value && value >= 1 && std::isfinite(value))
         {
-            return value;
+            return static_cast<float>(value);
         }
 
         std::cerr << "Ошибка ввода. Попробуй снова." << std::endl;
