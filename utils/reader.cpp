@@ -1,26 +1,25 @@
-#include <iostream>
-#include <sstream>
-#include <cmath>
-#include <limits>
 #include "reader.h"
 
-float IoReader::readLine(const std::string &paramName)
-{
+#include <cmath>
+#include <iostream>
+#include <sstream>
+
+#include "../utils/constants.h"
+
+float IoReader::readLine(const std::string& paramName) {
     double value;
     std::string line;
 
-    while (true)
-    {
-        std::cout << "Paste param (" << paramName << ") -> ";
+    while (true) {
+        std::cout << "Paste param (" << RED << paramName << RESET << ") -> ";
         std::getline(std::cin, line);
 
         std::istringstream iss(line);
 
-        if (iss >> value && value >= 1 && std::isfinite(value))
-        {
+        if (iss >> value && value >= 1 && std::isfinite(value)) {
             return static_cast<float>(value);
         }
 
-        std::cerr << "Ошибка ввода. Попробуй снова." << std::endl;
+        std::cerr << RED << "Ошибка ввода. Попробуй снова." << RESET << std::endl;
     }
 }

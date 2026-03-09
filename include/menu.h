@@ -1,21 +1,18 @@
 #include <functional>
-#include <vector>
 #include <string>
+#include <vector>
+
 #include "../utils/reader.h"
 
-class Menu
-{
-public:
+class Menu {
+   public:
     bool running = true;
     void getMenu();
     void handleMenuChoice(int choice);
 
-    bool isRunning() const
-    {
-        return running;
-    }
+    bool isRunning() const { return running; }
 
-private:
+   private:
     IoReader reader;
 
     void add();
@@ -25,8 +22,7 @@ private:
 
     void exit();
 
-    struct MenuItem
-    {
+    struct MenuItem {
         std::string title;
         std::function<void()> action;
     };
@@ -35,8 +31,7 @@ private:
     void initMenu();
     void arraysMenu();
 
-    struct Params
-    {
+    struct Params {
         float first;
         float second;
     };

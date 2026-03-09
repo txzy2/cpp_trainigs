@@ -1,13 +1,12 @@
 #ifndef MATH_H
 #define MATH_H
 
-class Math
-{
-private:
+class Math {
+   private:
     float first;
     float second;
 
-public:
+   public:
     Math(float first, float second) : first(first), second(second) {}
 
     float add() { return first + second; }

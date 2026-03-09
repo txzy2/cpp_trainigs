@@ -3,10 +3,9 @@
 
 #include <string>
 
-class IoReader
-{
-public:
-    float readLine(const std::string &paramName);
+class IoReader {
+   public:
+    float readLine(const std::string& paramName);
 };
 
 #endif

@@ -15,4 +15,5 @@ add_executable(app
     src/menu.cpp
     src/arrays.cpp
     utils/reader.cpp
+    utils/constants.h
 )
